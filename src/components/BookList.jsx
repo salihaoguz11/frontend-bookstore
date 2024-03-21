@@ -24,7 +24,7 @@ const BookList = () => {
     getBooks();
   }, []);
 
-  const baseURL = "http://localhost:8000";
+  const baseURL = "https://backend-bookstore-6njt.onrender.com";
   const getBooks = async () => {
     try {
       const response = await axios.get(baseURL);

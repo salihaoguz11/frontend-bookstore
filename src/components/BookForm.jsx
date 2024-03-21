@@ -24,7 +24,10 @@ const BookForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000", formData);
+      const response = await axios.post(
+        "https://backend-bookstore-6njt.onrender.com",
+        formData
+      );
       console.log(response.data);
       toastSuccessNotify("Succesfully Added");
       navigate("/");
