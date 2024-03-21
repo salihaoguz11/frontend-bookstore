@@ -43,7 +43,9 @@ const BookList = () => {
   const handleDelete = async (rowToDelete) => {
     // Handle delete operation
     try {
-      await axios.delete(`http://localhost:8000/books/${rowToDelete.id}`);
+      await axios.delete(
+        `https://backend-bookstore-6njt.onrender.com/books/${rowToDelete.id}`
+      );
       const updatedData = formData.filter((row) => row.id !== rowToDelete.id);
       setFormData(updatedData);
       toastSuccessNotify("Succesfully deleted");
